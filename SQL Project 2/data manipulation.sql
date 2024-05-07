@@ -50,7 +50,7 @@ ALTER TABLE responses_v2
 ADD age_bracket VARCHAR(30);
 
 -- Assigning values into the age_bracket column where:
-		-- age between 20 and 29 is 'Young Adult'
+	-- age between 20 and 29 is 'Young Adult'
         -- age between 30 and 45 is 'Middle Age'
         -- age above 45 is 'Old Age'
         
@@ -102,7 +102,7 @@ ALTER TABLE responses_v2
 ADD car_brandname VARCHAR(50);
 
 -- Assigning values in car_brandname based from the data in car_brand column:
-		-- 1	BMW			11	Kia	
+		-- 1	BMW		11	Kia	
 		-- 2	Buick		12	Lincoln	
 		-- 3	Cadillac	13	Mazda
 		-- 4	Chevrolet	14	Mercedes Benz
@@ -194,7 +194,7 @@ SET car_brandname = 'Others'
 WHERE car_brand = 20;
 
 -- Creating a new column named US_region and assigning values corresponding to region column whereas:
-			-- 0	New England				5	East South Central
+			-- 0	New England			5	East South Central
 			-- 1	Mid-Atlantic			6	West South Central
 			-- 2	East North Central		7	Mountain
 			-- 3	West North Central		8	Pacific	
@@ -244,7 +244,7 @@ ALTER TABLE responses_v2
 ADD computer_brandname VARCHAR(20) NULL;
 
 -- Assigning values into computer_brandname column by assigning values corresponding to computer_brand data where
-	-- 0 AS 'Acer'
+    -- 0 AS 'Acer'
     -- 1 AS 'Sony'
 
 -- 0 AS 'Acer'
