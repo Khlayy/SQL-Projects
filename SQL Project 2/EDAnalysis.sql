@@ -18,8 +18,8 @@ FROM responses_v2;
 
 -- Comparing age and salary, grouped by preferred computer
 SELECT computer_brandname,
-		MIN(age),
-		MAX(age),
+	MIN(age),
+	MAX(age),
         MIN(salary),
         MAX(salary)
 FROM responses_v2
