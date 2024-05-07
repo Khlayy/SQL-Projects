@@ -4,23 +4,26 @@ AS
 SELECT *
 FROM responses;
 
--- Exploring the data
-SELECT * FROM responses_v2;
+-- Checking for duplicates
+SELECT id, salary, age
+FROM responses_v2
+WHERE salary IN (
+	SELECT salary
+	FROM responses_v2
+	GROUP BY salary
+	HAVING COUNT(*) > 1
+)
+ORDER BY salary;
 
 -- Total number of rows
 SELECT COUNT(*)
 FROM responses_v2;
 
--- Check duplicates in salary and whether it can be used as a PK
-SELECT COUNT(DISTINCT salary) 
-FROM responses_v2;
-	-- Query returned 9295 distinct salary which indicates that there are duplicates in the salary column
-
 -- Create a column 'id' AS PRIMARY KEY
 ALTER TABLE responses_v2
 ADD id INT PRIMARY KEY AUTO_INCREMENT;
 
--- Create a salary_bracket column to separate the respondents according to their salary
+-- Create a salary_bracket column to group the respondents according to their salary
 ALTER TABLE responses_v2
 ADD salary_bracket VARCHAR(30);
 
@@ -70,7 +73,7 @@ WHERE age > 45;
 ALTER TABLE responses_v2
 ADD education_level VARCHAR(50);
 
--- Assigning values into education_level column based from the data in education column where:
+-- Providing context by assigning values to education_level column where:
 			-- 0 AS 'Less than High School'
 			-- 1 AS 'High School'
 			-- 2 AS 'Less than College'
@@ -101,7 +104,7 @@ WHERE education = 4;
 ALTER TABLE responses_v2
 ADD car_brandname VARCHAR(50);
 
--- Assigning values in car_brandname based from the data in car_brand column:
+-- Providing context by assigning values to car_brandname column where:
 		-- 1	BMW		11	Kia	
 		-- 2	Buick		12	Lincoln	
 		-- 3	Cadillac	13	Mazda
@@ -243,7 +246,7 @@ WHERE region = 8;
 ALTER TABLE responses_v2
 ADD computer_brandname VARCHAR(20) NULL;
 
--- Assigning values into computer_brandname column by assigning values corresponding to computer_brand data where
+-- Assigning values to computer_brandname column by assigning values corresponding to computer_brand data where
     -- 0 AS 'Acer'
     -- 1 AS 'Sony'
 
