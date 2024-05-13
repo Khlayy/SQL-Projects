@@ -7,7 +7,7 @@ This is a collection of my SQL Personal Projects. These projects represent the m
 I selected datasets with varying complexities to enhance my SQL and data analytics skills.
 
 ## Data Understanding
-Most of the datasets I worked on these projects relates to my passion and profession. As a chemical engineer and a Ghibli fan, I worked on US EPA's SCIL and Studio Ghibli datasets and performed data cleaning, manipulation, and exploratory data analysis (EDA), refining my skills and expanding my capabilities in SQL. 
+Most of the datasets I worked on these projects relates to my passion and profession. As a chemical engineer and a Ghibli fan, I worked on US EPA's SCIL and Studio Ghibli datasets, and performed data cleaning, manipulation, and exploratory data analysis (EDA), refining my skills and expanding my capabilities in SQL. 
 
 ## Technologies
 SQL
