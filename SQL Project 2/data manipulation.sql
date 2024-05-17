@@ -5,7 +5,7 @@ SELECT *
 FROM responses;
 
 -- Checking for duplicates
-SELECT id, salary, age
+SELECT salary, age
 FROM responses_v2
 WHERE salary IN (
 	SELECT salary
